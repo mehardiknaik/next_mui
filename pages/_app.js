@@ -1,3 +1,4 @@
+import "../src/MuiClassNameSetup";
 import { CacheProvider } from "@emotion/react";
 import { Container } from "@mui/system";
 import createEmotionCache from "../src/createEmotionCache";
@@ -16,10 +17,11 @@ function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
-      <Container>
-        <Component {...pageProps} />
-      </Container>
+        <Container>
+          <Component {...pageProps} />
+        </Container>
       </ThemeProvider>
+      //{" "}
     </CacheProvider>
   );
 }
@@ -30,6 +32,6 @@ const theme = createTheme({
       main: "#fcba03",
     },
   },
- });
+});
 
 export default MyApp;

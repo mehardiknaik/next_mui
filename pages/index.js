@@ -14,9 +14,9 @@ export default function Home({ news }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {news.map((e) => (
-        <NewsRow key= {e.time}{...e} />
+        <NewsRow key={e.id} {...e} />
       ))}
-      <Link href={'test'}>test</Link>
+      <Link href={"test"}>test</Link>
     </div>
   );
 }
