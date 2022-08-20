@@ -5,6 +5,7 @@ import createEmotionCache from "../src/createEmotionCache";
 import { ThemeProvider } from "@mui/material";
 import { createTheme } from "@mui/material/styles";
 import "../styles/globals.css";
+import Header from "../src/Header";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -17,11 +18,11 @@ function MyApp({
   return (
     <CacheProvider value={emotionCache}>
       <ThemeProvider theme={theme}>
+        <Header/>
         <Container>
           <Component {...pageProps} />
         </Container>
       </ThemeProvider>
-      //{" "}
     </CacheProvider>
   );
 }
